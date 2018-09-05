@@ -17,7 +17,6 @@ export class LandingComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.data);
   }
 
   onChange() {
@@ -27,7 +26,6 @@ export class LandingComponent implements OnInit {
   }
 
   readBook(url) {
-    console.log(url)
     window.open(url, '_blank');
   }
 

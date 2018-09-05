@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApiResolver } from './resolvers/api.resolver';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { FormsModule } from '@angular/forms';
+import { FormatUrlPipe } from './pipes/format-url.pipe';
 
 const routes: Routes = [
   { path: '', component: LandingComponent, resolve: {data: ApiResolver} },
@@ -27,7 +28,8 @@ const routes: Routes = [
     OfflineWithCacheComponent,
     PreCacheComponent,
     LandingComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    FormatUrlPipe
   ],
   imports: [
     BrowserModule,
