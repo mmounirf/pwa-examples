@@ -1,3 +1,37 @@
-<p>
-  offline works!
-</p>
+<div class="container">
+    <div class="search-container">
+      <mat-form-field>
+        <input matInput placeholder="Search for Books" [(ngModel)]="searchTerm" (ngModelChange)="onChange()">
+      </mat-form-field>
+    </div>
+
+    <div class="data-container">
+      <ng-template ngFor let-book [ngForOf]="data.items">
+        <mat-card class="event-card"*ngIf="book.volumeInfo.imageLinks && book.volumeInfo.description">
+          <p class="title">{{book.volumeInfo.title}}</p>
+          <div class="info">
+            <p>{{book.volumeInfo.subtitle}}</p>
+            <div class="meta">
+                <div class="authors">
+                    <strong>Author:</strong><p *ngFor="let author of book.volumeInfo.authors">{{author}}</p>
+                </div>
+                <div class="publisher">
+                  <strong>Publisher:</strong><p>{{book.volumeInfo.publisher}}</p>
+                </div>
+            </div>
+          </div>
+          <mat-card-content>
+            <img class="book-img mat-elevation-z6" [src]="book.volumeInfo.imageLinks?.smallThumbnail | formatUrl"/>
+              <p [innerHTML]="(book.volumeInfo.description.length>100) ? (book.volumeInfo.description | slice:0:800)+'..':(book.volumeInfo.description)"></p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="readBook(book.volumeInfo.previewLink)">Read</button>
+          </mat-card-actions>
+        </mat-card>
+      </ng-template>
+
+    </div>
+    <div class="no-results" *ngIf="data.totalItems == 0">
+        <img src="./assets/images/no-results.png" />
+      </div>
+  </div>
