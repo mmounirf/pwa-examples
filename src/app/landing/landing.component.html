@@ -1,27 +1,35 @@
 <div class="container">
+  <div class="search-container">
     <mat-form-field>
-        <input matInput placeholder="Search Events" [(ngModel)]="searchTerm" (ngModelChange)="onChange($event)">
-      </mat-form-field>
-  <mat-card class="event-card" *ngFor="let event of data.events">
-    <mat-card-header>
+      <input matInput placeholder="Search for Books" [(ngModel)]="searchTerm" (ngModelChange)="onChange()">
+    </mat-form-field>
+  </div>
 
-          <mat-card-title>{{event.name}}</mat-card-title>
-          <mat-card-subtitle>{{event.venue?.name}}</mat-card-subtitle>
-
-      <span class="spacer"></span>
-      <div class="right">
-        <div class="image" *ngFor="let host of event.event_hosts">
-            <img class="host-img" src="{{host.photo?.thumb_link}}" *ngIf="host.photo?.thumb_link">
+  <div class="data-container">
+    <ng-template ngFor let-book [ngForOf]="data.items">
+      <mat-card class="event-card"*ngIf="book.volumeInfo.imageLinks && book.volumeInfo.description">
+        <p class="title">{{book.volumeInfo.title}}</p>
+        <div class="info">
+          <p>{{book.volumeInfo.subtitle}}</p>
+          <div class="meta">
+              <div class="authors">
+                  <strong>Author:</strong><p *ngFor="let author of book.volumeInfo.authors">{{author}}</p>
+              </div>
+              <div class="publisher">
+                <strong>Publisher:</strong><p>{{book.volumeInfo.publisher}}</p>
+              </div>
+          </div>
         </div>
-      </div>
-    </mat-card-header>
-    <mat-card-content>
-      <p [innerHTML]="(event.description.length>400) ? (event.description | slice:0:400)+'...' : event.description"></p>
-      <p *ngIf="event.description.length>400"><a href="{{event.link}}" target="_blank">Read more</a></p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+
+        <mat-card-content>
+          <img class="book-img mat-elevation-z6" src="{{book.volumeInfo.imageLinks?.smallThumbnail}}" />
+            <p [innerHTML]="(book.volumeInfo.description.length>100) ? (book.volumeInfo.description | slice:0:800)+'..':(book.volumeInfo.description)"></p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="readBook(book.volumeInfo.previewLink)">Read</button>
+        </mat-card-actions>
+      </mat-card>
+    </ng-template>
+  </div>
+
 </div>

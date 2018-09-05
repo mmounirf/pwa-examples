@@ -11,7 +11,7 @@ export class ApiService {
     private http: HttpClient
   ) { }
 
-  getData(url): any {
-    return this.http.get(url);
+  getData(url, keyword): any {
+    return this.http.get(url + keyword);
   }
 }

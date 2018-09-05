@@ -11,6 +11,6 @@ export class ApiResolver implements Resolve<any> {
   constructor(private apiService: ApiService) {}
 
   resolve() {
-    return this.apiService.getData(environment.apiUrl);
+    return this.apiService.getData(environment.apiUrl, 'progressive web apps');
   }
 }

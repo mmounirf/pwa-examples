@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from '../../environments/environment.prod';
 
 @Component({
@@ -11,19 +11,24 @@ import { environment } from '../../environments/environment.prod';
 
 
 export class LandingComponent implements OnInit {
-  private data = this.route.snapshot.data.data;
-  constructor(private apiService: ApiService, private route: ActivatedRoute) {
+  searchTerm = '';
+  public data = this.route.snapshot.data.data;
+  constructor(private apiService: ApiService, private route: ActivatedRoute, private router: Router) {
   }
 
   ngOnInit() {
     console.log(this.data);
   }
 
-  onChange(event) {
-    console.log(event);
-    this.apiService.getData(environment.apiUrl + `&text=${event}`).subscribe((resp) => {
+  onChange() {
+    this.apiService.getData(environment.apiUrl, this.searchTerm).subscribe((resp) => {
       this.data = resp;
     });
+  }
+
+  readBook(url) {
+    console.log(url)
+    window.open(url, '_blank');
   }
 
 }
