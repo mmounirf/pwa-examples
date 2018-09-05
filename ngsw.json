@@ -1,0 +1,101 @@
+{
+  "configVersion": 1,
+  "index": "/pwa-examples/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/pwa-examples/favicon.ico",
+        "/pwa-examples/index.html",
+        "/pwa-examples/main.97ca8c033f6a00648c08.js",
+        "/pwa-examples/polyfills.2f4a59095805af02bd79.js",
+        "/pwa-examples/runtime.a66f828dca56eeb90e02.js",
+        "/pwa-examples/styles.576b67a3ca3de1830f53.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/pwa-examples/assets/icons/icon-128x128.png",
+        "/pwa-examples/assets/icons/icon-144x144.png",
+        "/pwa-examples/assets/icons/icon-152x152.png",
+        "/pwa-examples/assets/icons/icon-192x192.png",
+        "/pwa-examples/assets/icons/icon-384x384.png",
+        "/pwa-examples/assets/icons/icon-512x512.png",
+        "/pwa-examples/assets/icons/icon-72x72.png",
+        "/pwa-examples/assets/icons/icon-96x96.png",
+        "/pwa-examples/assets/images/favicon.ico",
+        "/pwa-examples/assets/images/icon-144x144.png",
+        "/pwa-examples/assets/images/icon-180x180.png",
+        "/pwa-examples/assets/images/icon-192x192.png",
+        "/pwa-examples/assets/images/icon-228x228.png",
+        "/pwa-examples/assets/images/icon-48x48.png",
+        "/pwa-examples/assets/images/icon-512x512.png",
+        "/pwa-examples/assets/images/icon-72x72.png",
+        "/pwa-examples/assets/images/icon-96x96.png",
+        "/pwa-examples/assets/images/icon.svg",
+        "/pwa-examples/assets/images/logo.svg",
+        "/pwa-examples/assets/images/no-results.png",
+        "/pwa-examples/assets/manifest.json",
+        "/pwa-examples/assets/offline.html",
+        "/pwa-examples/assets/sw.js"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/pwa-examples/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/pwa-examples/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/pwa-examples/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/pwa-examples/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/pwa-examples/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/pwa-examples/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/pwa-examples/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/pwa-examples/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/pwa-examples/assets/images/favicon.ico": "93978a9a3ace00a8e91bdb976fe1785e07c92a1d",
+    "/pwa-examples/assets/images/icon-144x144.png": "d617877f3894799b7899aea1bc03065968811a5c",
+    "/pwa-examples/assets/images/icon-180x180.png": "9a24f68fec527974ed791acbdbb9cc73ffbb45d7",
+    "/pwa-examples/assets/images/icon-192x192.png": "59c371d4a72c3a28219fe0615b973522b84a0708",
+    "/pwa-examples/assets/images/icon-228x228.png": "f9299b0f87cd4300081032da7e07209133aa7a99",
+    "/pwa-examples/assets/images/icon-48x48.png": "e71f12755f020fad0138ddb59b6d66e2ae07927e",
+    "/pwa-examples/assets/images/icon-512x512.png": "af80280636bd2e11d5fdb7eb4755f1351c0f80a3",
+    "/pwa-examples/assets/images/icon-72x72.png": "6daf110807802b2b67cb55c2e857093d45cfc5c8",
+    "/pwa-examples/assets/images/icon-96x96.png": "be56661b888e167ff9720c8873777e5a345705f4",
+    "/pwa-examples/assets/images/icon.svg": "44c0bafe69c5a671aa72c0b5b93d854ee33d6feb",
+    "/pwa-examples/assets/images/logo.svg": "6926e406c81225586f15f190e8636ecb88a3c6b9",
+    "/pwa-examples/assets/images/no-results.png": "ee2e9e885e83ddc0a7a943e9e67981cee380134d",
+    "/pwa-examples/assets/manifest.json": "05c6fd981423a20e1a0c110b7be76de124f9592f",
+    "/pwa-examples/assets/offline.html": "638dc982f8c9abd30ecb7e0ba3ef2572c44e9ddf",
+    "/pwa-examples/assets/sw.js": "f577bf32b42ca20d0bbccdf9ecdbd1db95e607ac",
+    "/pwa-examples/favicon.ico": "4ed0f768e3159993272ae4a0687032bdab6c4892",
+    "/pwa-examples/index.html": "480a355483b3cd78f247167729159e00ee64c1bb",
+    "/pwa-examples/main.97ca8c033f6a00648c08.js": "0b4ca079ae23294788fae8c2e74ee1aef4646761",
+    "/pwa-examples/polyfills.2f4a59095805af02bd79.js": "8949bb1b1e302dda246f6ed9c2da703270360b1f",
+    "/pwa-examples/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
+    "/pwa-examples/styles.576b67a3ca3de1830f53.css": "c79e3469155363efb0f8f546315c6124379fb0f7"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
