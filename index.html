@@ -11,7 +11,7 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="228x228" href="assets/images/icon-228x228.png">
   <link rel="apple-touch-icon" type="image/png" href="assets/images/icon-228x228.png">
-  <link rel="canonical" href="pwa-examples">
+  <link rel="canonical" href="https://mmounirf.github.io/pwa-examples/">
 
   <meta name="application-name" content="PWA Examples"/>
   <meta name="msapplication-TileColor" content="#90a4ae" />
@@ -21,9 +21,10 @@
 <link rel="stylesheet" href="styles.576b67a3ca3de1830f53.css"></head>
 <body>
   <app-root></app-root>
+  <script>if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('https://mmounirf.github.io/pwa-examples/assets/service-worker.js');
+    }
+    </script>
 <script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.2f4a59095805af02bd79.js"></script><script type="text/javascript" src="main.7c889a0ef9ffdc192201.js"></script></body>
-<script>if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('https://mmounirf.github.io/pwa-examples/assets/service-worker.js');
-  }
-  </script>
+
 </html>
