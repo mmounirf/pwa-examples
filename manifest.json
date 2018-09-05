@@ -1,39 +1,39 @@
-{
-  "name": "Progressive Web Apps Examples",
-  "short_name": "PWA Examples",
-  "description": "PWA Example and use cases",
-  "start_url": "/?homescreen=1",
-  "scope": ".",
-  "orientation": "portrait",
-  "display": "standalone",
-  "background_color": "#90a4ae",
-  "theme_color": "#90a4ae",
-  "icons": [
-    {
-      "src": "/assets/images/icon-144x144.png",
-      "sizes": "144x144",
-      "type": "image/png"
-    },
-    {
-      "src": "/assets/images/icon-180x180.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    },
-    {
-      "src": "/assets/images/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/assets/images/icon-228x228.png",
-      "sizes": "228x228",
-      "type": "image/png"
-    },
-    {
-      "src": "/assets/images/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+  {
+    "name": "Progressive Web Apps Examples",
+    "short_name": "PWA Examples",
+    "description": "PWA Example and use cases",
+    "start_url": "index.html",
+    "scope": ".",
+    "orientation": "portrait",
+    "display": "standalone",
+    "background_color": "#90a4ae",
+    "theme_color": "#90a4ae",
+    "icons": [
+      {
+        "src": "/assets/images/icon-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/images/icon-180x180.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/images/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/images/icon-228x228.png",
+        "sizes": "228x228",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/images/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
 
-}
+  }
