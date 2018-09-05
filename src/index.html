@@ -5,16 +5,45 @@
   <title>PWA Examples</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="images/favicon-196x196.png">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="manifest" href="/assets/app.webmanifest">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/ios/ios-appicon-180-180.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/firefox/firefox-general-32-32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/android/android-launchericon-192-192.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/chrome/chrome-favicon-16-16.png">
-  <meta name="msapplication-TileColor" content="#90a4ae">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="images/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="images/favicon-128.png" sizes="128x128" />
+  <meta name="msapplication-TileImage" content="images/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="images/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="images/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="images/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="images/mstile-310x310.png" />
+  <meta name="application-name" content="PWA Examples"/>
+  <meta name="msapplication-TileColor" content="#90a4ae" />
   <meta name="theme-color" content="#90a4ae">
+  <link rel="canonical" href="https://mmounirf.github.io/pwa-examples/">
+  <link rel="manifest" href="/assets/manifest.json">
 </head>
 <body>
   <app-root></app-root>
 </body>
+<script>
+    if ('serviceWorker' in navigator) {
+      console.log("Will the service worker register?");
+      navigator.serviceWorker.register('/assets/service-worker.js')
+        .then(function(reg){
+          console.log("Yes, it did.");
+        }).catch(function(err) {
+          console.log("No it didn't. This happened: ", err)
+        });
+    }
+  </script>
 </html>
