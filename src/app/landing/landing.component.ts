@@ -20,9 +20,16 @@ export class LandingComponent implements OnInit {
   }
 
   onChange() {
-    this.apiService.getData(environment.apiUrl, this.searchTerm).subscribe((resp) => {
-      this.data = resp;
-    });
+    if (!this.searchTerm) {
+      this.apiService.getData(environment.apiUrl, 'Progressive Web Apps').subscribe((resp) => {
+        this.data = resp;
+      });
+    } else {
+      this.apiService.getData(environment.apiUrl, this.searchTerm).subscribe((resp) => {
+        this.data = resp;
+      });
+    }
+
   }
 
   readBook(url) {
