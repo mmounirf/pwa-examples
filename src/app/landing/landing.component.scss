@@ -1,0 +1,45 @@
+.container{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  mat-form-field{
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  mat-card{
+    width: 20%;
+    height: 300px;
+    margin: 1%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+
+
+  @media only screen and (max-width : 1024px) {
+    mat-card{
+      width: 100%;
+    }
+  }
+  .right{
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    img{
+      height: 40px;
+      width: 40px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+}

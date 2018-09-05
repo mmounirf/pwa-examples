@@ -1,21 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router'
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { OfflineComponent } from './offline/offline.component';
 import { OfflineWithCacheComponent } from './offline-with-cache/offline-with-cache.component';
 import { PreCacheComponent } from './pre-cache/pre-cache.component';
 import { LandingComponent } from './landing/landing.component';
-import { MatToolbarModule, MatButtonModule } from '@angular/material';
-import { ApiService } from './services/api.service';
+import { MatToolbarModule, MatButtonModule, MatProgressSpinnerModule, MatCardModule, MatInputModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
+import { ApiResolver } from './resolvers/api.resolver';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
-  { path: '', component: LandingComponent },
-  { path: 'offline', component: OfflineComponent },
-  { path: 'offline-with-cache', component: OfflineWithCacheComponent },
-  { path: 'pre-cache', component: PreCacheComponent }
+  { path: '', component: LandingComponent, resolve: {data: ApiResolver} },
+  { path: 'offline', component: OfflineComponent, resolve: {data: ApiResolver} },
+  { path: 'offline-with-cache', component: OfflineWithCacheComponent, resolve: {data: ApiResolver} },
+  { path: 'pre-cache', component: PreCacheComponent, resolve: {data: ApiResolver} }
 ];
 
 @NgModule({
@@ -24,17 +26,22 @@ const routes: Routes = [
     OfflineComponent,
     OfflineWithCacheComponent,
     PreCacheComponent,
-    LandingComponent
+    LandingComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
+    FormsModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatProgressSpinnerModule,
+    MatCardModule,
+    MatInputModule
   ],
-  providers: [ApiService],
+  providers: [ApiResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

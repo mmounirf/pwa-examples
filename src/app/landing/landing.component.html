@@ -1,0 +1,27 @@
+<div class="container">
+    <mat-form-field>
+        <input matInput placeholder="Search Events" [(ngModel)]="searchTerm" (ngModelChange)="onChange($event)">
+      </mat-form-field>
+  <mat-card class="event-card" *ngFor="let event of data.events">
+    <mat-card-header>
+
+          <mat-card-title>{{event.name}}</mat-card-title>
+          <mat-card-subtitle>{{event.venue?.name}}</mat-card-subtitle>
+
+      <span class="spacer"></span>
+      <div class="right">
+        <div class="image" *ngFor="let host of event.event_hosts">
+            <img class="host-img" src="{{host.photo?.thumb_link}}" *ngIf="host.photo?.thumb_link">
+        </div>
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+      <p [innerHTML]="(event.description.length>400) ? (event.description | slice:0:400)+'...' : event.description"></p>
+      <p *ngIf="event.description.length>400"><a href="{{event.link}}" target="_blank">Read more</a></p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
