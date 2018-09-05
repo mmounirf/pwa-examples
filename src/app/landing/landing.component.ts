@@ -12,11 +12,15 @@ import { environment } from '../../environments/environment.prod';
 
 export class LandingComponent implements OnInit {
   searchTerm = '';
+  offline = false;
   public data = this.route.snapshot.data.data;
   constructor(private apiService: ApiService, private route: ActivatedRoute, private router: Router) {
   }
 
   ngOnInit() {
+    if (!navigator.onLine) {
+      this.offline = true;
+    }
   }
 
   onChange() {

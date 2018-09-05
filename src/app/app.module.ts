@@ -13,6 +13,8 @@ import { ApiResolver } from './resolvers/api.resolver';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { FormsModule } from '@angular/forms';
 import { FormatUrlPipe } from './pipes/format-url.pipe';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 const routes: Routes = [
   { path: '', component: LandingComponent, resolve: {data: ApiResolver} },
@@ -41,7 +43,8 @@ const routes: Routes = [
     MatButtonModule,
     MatProgressSpinnerModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [ApiResolver],
   bootstrap: [AppComponent]
