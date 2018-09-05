@@ -1,0 +1,40 @@
+{
+  "short_name": "PWA Examples",
+  "name": "Progressive Web Apps Examples",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "images/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-228x228.png",
+      "sizes": "228x228",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon.svg",
+      "sizes": "any",
+      "type": "image/svg"
+    }
+  ],
+  "start_url": "./../index.html",
+  "theme_color": "#90a4ae",
+  "background_color": "#90a4ae"
+}
