@@ -2,7 +2,7 @@
   "name": "Progressive Web Apps Examples",
   "short_name": "PWA Examples",
   "description": "PWA Example and use cases",
-  "start_url": "./../index.html",
+  "start_url": "/?homescreen=1",
   "scope": "/",
   "orientation": "portrait",
   "display": "standalone",
