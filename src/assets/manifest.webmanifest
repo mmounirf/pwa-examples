@@ -1,7 +1,12 @@
 {
-  "short_name": "PWA Examples",
   "name": "Progressive Web Apps Examples",
+  "short_name": "PWA Examples",
+  "description": "PWA Example and use cases",
+  "start_url": "./../index.html?utm=homescreen",
+  "orientation": "portrait",
   "display": "standalone",
+  "background_color": "#90a4ae",
+  "theme_color": "#90a4ae",
   "icons": [
     {
       "src": "images/icon-144x144.png",
@@ -33,8 +38,6 @@
       "sizes": "any",
       "type": "image/svg"
     }
-  ],
-  "start_url": "./../index.html",
-  "theme_color": "#90a4ae",
-  "background_color": "#90a4ae"
+  ]
+
 }
