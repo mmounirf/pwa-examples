@@ -43,7 +43,7 @@
   <app-root></app-root>
   <script>
       if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js', { scope: '/' })
+        navigator.serviceWorker.register('https://mmounirf.github.io/pwa-examples/sw.js', { scope: '/' })
           .then(function(registration) {
                 console.log('Service Worker Registered');
           });
