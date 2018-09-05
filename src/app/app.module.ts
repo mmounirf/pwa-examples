@@ -8,13 +8,15 @@ import { OfflineWithCacheComponent } from './offline-with-cache/offline-with-cac
 import { PreCacheComponent } from './pre-cache/pre-cache.component';
 import { LandingComponent } from './landing/landing.component';
 import { MatToolbarModule, MatButtonModule } from '@angular/material';
+import { ApiService } from './services/api.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
   { path: 'offline', component: OfflineComponent },
-  { path: 'offline-with-cache', component: OfflineComponent },
-  { path: 'pre-cache', component: OfflineComponent }
-]
+  { path: 'offline-with-cache', component: OfflineWithCacheComponent },
+  { path: 'pre-cache', component: PreCacheComponent }
+];
 
 @NgModule({
   declarations: [
@@ -28,10 +30,11 @@ const routes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
+    HttpClientModule,
     MatToolbarModule,
     MatButtonModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

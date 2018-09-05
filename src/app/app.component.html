@@ -1,10 +1,19 @@
 <mat-toolbar color="primary" class="mat-elevation-z6">
-    <span>PWA Examples</span>
+    <span class="site-title" [routerLink]="['/']">PWA Examples</span>
     <span class="spacer"></span>
     <div class="nav">
-      <button mat-button>Offline</button>
-      <button mat-button>Offline with cache</button>
-      <button mat-button>Pre-Cache</button>
+      <button mat-button [routerLink]="['/offline']">Offline</button>
+      <button mat-button [routerLink]="['/offline-with-cache']">Offline with cache</button>
+      <button mat-button [routerLink]="['/pre-cache']">Pre-Cache</button>
     </div>
 </mat-toolbar>
+<div class="container">
+  <div class="logo">
+    <img src="./assets/images/logo.svg">
+  </div>
+  <div class="intro">
+    <h1>Progressive Web App</h1>
+    <h4>Example use cases</h4>
+  </div>
+</div>
 <router-outlet></router-outlet>
