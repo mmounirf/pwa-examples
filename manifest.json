@@ -3,7 +3,6 @@
     "short_name": "PWA Examples",
     "description": "PWA Example and use cases",
     "start_url": "index.html",
-    "scope": ".",
     "orientation": "portrait",
     "display": "standalone",
     "background_color": "#90a4ae",
