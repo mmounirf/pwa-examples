@@ -20,7 +20,6 @@
               </div>
           </div>
         </div>
-
         <mat-card-content>
           <img class="book-img mat-elevation-z6" src="{{book.volumeInfo.imageLinks?.smallThumbnail}}" />
             <p [innerHTML]="(book.volumeInfo.description.length>100) ? (book.volumeInfo.description | slice:0:800)+'..':(book.volumeInfo.description)"></p>
@@ -30,6 +29,9 @@
         </mat-card-actions>
       </mat-card>
     </ng-template>
-  </div>
 
+  </div>
+  <div class="no-results" *ngIf="data.items">
+      <img src="./assets/images/no-results.png" />
+    </div>
 </div>
